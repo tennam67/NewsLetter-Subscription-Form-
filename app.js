@@ -34,10 +34,10 @@ app.post("/", (req, res)=>{
     };
 
     const jsonData = JSON.stringify(data);
-    const url = "https://us6.api.mailchimp.com/3.0/lists/a904dfb46f"
+    const url = "https://us6.api.mailchimp.com/3.0/lists/{Your list-id}"
     const options = {
         method: "POST",
-        auth: "tenzin:8c7e3fb439d582e24de3d2aa76532cb4-us6"
+        auth: "tenzin:{Your API}"
     }
 
     const request = https.request(url, options, (response)=>{
@@ -58,8 +58,3 @@ app.post("/failure", (req, res)=>{
 app.listen(3000, ()=> {
     console.log("Your server is up and running on port 3000.")
 });
-
-// 8c7e3fb439d582e24de3d2aa76532cb4-us6
-
-
-// a904dfb46f
